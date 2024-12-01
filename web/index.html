@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <script defer src="assets/main.js"></script>
+    <title>Documento</title>
+</head>
+<body> 
+    <div class="container right-panel-active">
+        <div class="container__form container--signup">
+            <form action="php/registro.php" method="POST" class="form" id="form1">
+                <h2 class="form__title">Registrarse</h2>
+                <input type="text" name="user" placeholder="Usuario" class="input" required />
+                <input type="email" name="email" placeholder="Correo Electrónico" class="input" required />
+                <input type="password" name="password" placeholder="Contraseña" class="input" required autocomplete="current-password" />
+                <label for="departamento">Selecciona un departamento:</label>
+                <select name="departamento" id="departamento" class="input" required>
+                    <option value="" disabled selected>-- Selecciona un departamento --</option>
+                    <option value="ventas">Ventas</option>
+                    <option value="soporte">Soporte</option>
+                    <option value="desarrollo">Desarrollo</option>
+                    <option value="marketing">Marketing</option>
+                </select>
+
+                <button type="submit" class="btn" name="signup">Registrarse</button>
+            </form>
+        </div>
+
+        <div class="container__form container--signin">
+            <form action="php/login.php" method="POST" class="form" id="form2">
+                <h2 class="form__title">Iniciar Sesión</h2>
+                <input type="email" name="email" placeholder="Correo Electrónico" class="input" required />
+                <input type="password" name="password" placeholder="Contraseña" class="input" required autocomplete="current-password" />
+                <button type="submit" class="btn" name="signin">Iniciar Sesión</button>
+            </form>
+        </div>
+
+        <div class="container__overlay">
+            <div class="overlay">
+                <div class="overlay__panel overlay--left">
+                    <button class="btn" id="signIn">Iniciar Sesión</button>
+                </div>
+                <div class="overlay__panel overlay--right">
+                    <button class="btn" id="signUp">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
